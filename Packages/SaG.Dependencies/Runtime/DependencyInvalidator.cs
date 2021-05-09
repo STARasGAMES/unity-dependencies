@@ -16,7 +16,6 @@ namespace SaG.Dependencies
 
         public static void InvalidateAllDependencies()
         {
-            Debug.Log("InvalidateAllDependencies " + DateTime.Now);
             version++;
         }
     }
