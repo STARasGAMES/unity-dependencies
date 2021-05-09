@@ -1,10 +1,10 @@
 {
-  "name": "com.company-name.package-name",
+  "name": "com.sag.dependencies",
   "version": "0.0.1",
-  "displayName": "Pretty package name",
+  "displayName": "Dependencies",
   "description": "Your package description.",
-  "unity": "2019.4",
-  "unityRelease": "8f1",
+  "unity": "2019.3",
+  "unityRelease": "0f1",
   "keywords": [
     "tool"
   ],
@@ -19,5 +19,6 @@
       "description": "Sample description.",
       "path": "Samples~/SampleFolderName"
     }
-  ]
+  ],
+  "type": "library"
 }
