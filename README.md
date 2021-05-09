@@ -10,8 +10,9 @@ Source of template: https://medium.com/openupm/how-to-maintain-upm-package-part-
 ## Steps to setup your package repo
 
 * Create new repo using this project as template
-* Rename folder "Packages/PACKAGE_NAME" to represent your package name
+* Rename folder `Packages/PACKAGE_NAME` to represent your package name and namespace (if you are using Rider). For ex: `Packages/SaG.Dependencies`.
 * Change PACKAGE_NAME in ".github/workflows/ci.yml" to your packages's folder name
+(IMPORTANT: it's easier to use github web client to do this step, otherwise there is a big chance to mess around with git credentials)
 * Copy your package name, because you will need to paste it several time
   1. In Unity go to your package folder and select package.json file. Change all appropriate fields.
   2. In Unity go to your package folder and change names for all `.asmdef` files
@@ -21,4 +22,4 @@ Source of template: https://medium.com/openupm/how-to-maintain-upm-package-part-
 ## Installation
 Install via git url by adding this entry in your **manifest.json**
 
-`"$package-name$": "https://github.com/STARasGAMES/unity-dependencies.git#upm"`
+`"com.sag.dependencies": "https://github.com/STARasGAMES/unity-dependencies.git#upm"`
