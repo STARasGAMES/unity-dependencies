@@ -1,4 +1,5 @@
 ﻿using System;
+using SaG.Dependencies.Singletons;
 using SaG.Utilities;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -85,7 +86,7 @@ namespace SaG.Dependencies
 #if UNITY_GUID_BASED_REFERENCES
 				case DependencySource.Global: return globalReference.gameObject.AsUnityNull()?.GetComponent<T>();
 #endif
-                case DependencySource.Singleton: return Object.FindObjectOfType<T>();
+                case DependencySource.Singleton: return SingletonResolver.Instance.Resolve<T>();
                 default: throw new NotImplementedException();
             }
         }
@@ -255,7 +256,5 @@ namespace SaG.Dependencies
                 }
             }
         }
-
-        public static implicit operator T(Dependency<T> dependency) => dependency.raw;
     }
 }
