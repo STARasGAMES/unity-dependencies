@@ -1,7 +1,7 @@
 {
     "name": "SaG.Dependencies.Editor",
     "references": [
-        "GUID:e921ad2c6c58735448980a63475c7203"
+        "SaG.Dependencies"
     ],
     "includePlatforms": [
         "Editor"
